@@ -4,7 +4,7 @@
       <p class="center">Please register below:</p>
       <div class="form__container">
         <form @submit.prevent="register">
-            
+
           <!-- Email Field -->
           <div class="form__group">
             <label for="email">Email</label>
@@ -38,7 +38,7 @@
   
           <!-- Password Strength Feedback -->
           <div class="password__conditions">
-            <ul class="ul_group">
+            <ul class="ul__group">
               <li :class="{ valid: conditions.length }">At least 8 characters</li>
               <li :class="{ valid: conditions.special }">Contains special character</li>
               <li :class="{ valid: conditions.number }">Contains number</li>
@@ -150,16 +150,16 @@
   .password__conditions ul {
     padding: 0;
     margin: 10px 0 0;
+    list-style: none;
   }
   
   .password__conditions ul li {
     color: red;
-    text-decoration: dashed;
   }
   
   .password__conditions ul li.valid {
     color: green;
-    text-decoration: underline;
+    list-style:disc;
   }
   
   button {
