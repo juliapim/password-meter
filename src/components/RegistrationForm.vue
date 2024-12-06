@@ -13,6 +13,7 @@
               id="email"
               v-model="email"
               placeholder="test@acb.studio"
+              aria-required="true"
             />
           </div>
   
@@ -26,10 +27,12 @@
                 v-model="password"
                 @input="validatePassword"
                 placeholder="Enter your password"
+                aria-required="true"
               />
               <button
                 type="button"
                 @click="togglePasswordVisibility"
+                aria-label="Toggle password visibility"
               >
                 {{ passwordVisible ? "Hide Password" : "Show Password" }}
               </button>
@@ -58,7 +61,7 @@
           </div>
   
           <!-- Register Button -->
-          <button type="submit" :disabled="!isFormValid">
+          <button type="submit" :disabled="!isFormValid" aria-label="Register button">
             Register
           </button>
         </form>
